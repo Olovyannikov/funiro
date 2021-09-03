@@ -1,0 +1,17 @@
+.header__actions.actions
+    ul.actions__list
+        li.actions__item
+            button(type="button").actions__fav
+                +svg('#heart', 24, 24)
+        li.actions__item
+            .action__cart.cart
+                button(type="button").cart__btn
+                    +svg('#cart', 24, 24)
+                ul.cart__list
+                    li.cart__item
+        li.actions__profile
+            a(href="#").actions__profile-link
+                picture
+                    source(srcset="img/avatar@2x.webp 2x, img/avatar.webp 1x" type="image/webp")
+                    source(srcset="img/avatar@2x.jpg 2x, img/avatar.jpg 1x" type="image/jpeg")
+                    img(src="img/avatar.jpg" alt="User Avatar")

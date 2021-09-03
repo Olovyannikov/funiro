@@ -1,31 +1,64 @@
+@import "mixins";
+
+// Брейкпоинты
+
+$xl: rem-calc(1200);
+$lg: rem-calc(992);
+$md: rem-calc(768);
+$sm: rem-calc(576);
+$xs: rem-calc(320);
+
 :root {
   // цвета
   --color-black: #000;
   --color-white: #fff;
-  --color-eastbay: #484283;
-  --color-main: #444b58;
-  --color-main-hover: #31343c;
-  --color-accent: #f14f4f;
-  --color-accent-hover: #cc4949;
-  --color-border: rgba(255, 255, 255, 0.5);
-  --color-bg: #fff4ee;
-  --color-cameo: #dbbba9;
-  --color-gray: #b2b5bb;
-  --color-jumbo: #808080;
+  --color-primary: #e89f71;
+  --color-primary-light: rgba(232, 159, 113, 0.3);
+  --color-gray-1: #3a3a3a;
+  --color-gray-2: #616161;
+  --color-gray-3: #898989;
+  --color-gray-5: #d8d8d8;
+  --color-deep-blue: #262f56;
+
+  // Контейнер
+  --width: 1440px;
+  --padding: 20px;
+
+  // размеры
+  --s-8: rem-calc(8);
+  --s-14: rem-calc(14);
+  --s-16: rem-calc(16);
+  --s-18: rem-calc(18);
+  --s-20: rem-calc(20);
+  --s-24: rem-calc(24);
+  --s-28: rem-calc(28);
+  --s-30: rem-calc(30);
+  --s-32: rem-calc(32);
+  --s-40: rem-calc(40);
+  --s-44: rem-calc(44);
+  --s-48: rem-calc(48);
+  --s-56: rem-calc(56);
+  --s-80: rem-calc(80);
 
   // отступы
-  --grid-gap: 20px;
-  --main-offset: 40px;
-  --second-offset: 20px;
-  --small-offset: 10px;
-  --big-offset: 60px;
+  --extra-small-offset: var(--s-8);
+  --medium-offset: var(--s-16);
+  --large-offset: var(--s-24);
+  --grid-gap: var(--s-32);
+  --section-offset: var(--s-44);
+  --big-offset: var(--s-80);
 
   // шрифты
-  --font-family: "Intro", sans-serif;
-  --middle-high-bold: 700 30px / 140% var(--font-family);
-  --prehigh-book: 400 24px / 24px var(--font-family);
-  --prehigh-regular: 600 20px / 20px var(--font-family);
-  --middle-book: 400 16px / 140% var(--font-family);
-  --middle-regular: 600 16px / 140% var(--font-family);
-  --small-book: 400 14px / 140% var(--font-family);
+  --font-family: "Gilroy", sans-serif;
+  --font-heading-h1: 700 var(--s-56) / var(--s-67) var(--font-family);
+  --font-heading-h2: 700 var(--s-40) / var(--s-48) var(--font-family);
+  --font-text-500: 500 var(--s-20) / var(--s-30) var(--font-family);
+  --font-medium-600: 600 var(--s-20) / var(--s-30) var(--font-family);
+  --font-text-600: 500 var(--s-28) / var(--s-32) var(--font-family);
+  --font-small-500: 500 var(--s-16) / var(--s-24) var(--font-family);
+  --font-body-semibold: 600 var(--s-18) / var(--s-28) var(--font-family);
+
+  @include lg-block {
+    --padding: 100px;
+  }
 }

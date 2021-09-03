@@ -1,0 +1,33 @@
+-
+    var listItems = [
+        {
+            "item": "Products",
+            "icon": "#chevron",
+            "submenu": ["item1", "lorem", "blah"]
+        },
+        {
+            "item": "Rooms",
+            "icon": "#chevron",
+            "submenu": ["item1", "lorem", "blah"]
+        },
+        {
+            "item": "Inspirations",
+        },
+    ];
+
+.header__main
+    a.header__logo Funiro.
+    nav.header__nav.nav
+        ul.nav__list
+            each val in listItems
+                li.nav__item
+                    a(href='#').nav__link
+                        | #{val.item}
+                        span.nav__item-icon
+                            +svg(val.icon, 20, 20)
+                    if val.submenu
+                        ul.nav__submenu
+                            each item in val.submenu
+                                li.nav__submenu
+                                    a(href="#").nav__submenu-item
+                                        | #{item}
