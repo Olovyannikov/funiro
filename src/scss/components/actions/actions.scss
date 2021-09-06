@@ -1,0 +1,40 @@
+.actions {
+  position: relative;
+  z-index: 5;
+
+  &__list {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    gap: var(--s-32);
+  }
+
+  &__item {
+    color: var(--color-deep-blue);
+
+    svg {
+      color: var(--color-deep-blue);
+    }
+
+    button {
+      display: flex;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+
+      svg {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__profile {
+    width: rem-calc(40);
+    height: rem-calc(40);
+    font-size: 0;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,70 @@
+.search {
+  margin-right: var(--s-32);
+
+  @include xl-block {
+    flex: 1 1 auto;
+  }
+}
+
+.search-form {
+  &__form {
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+  }
+
+  &__btn {
+    position: absolute;
+    left: rem-calc(12);
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: #333;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    border: none;
+    padding: rem-calc(12) 0;
+    width: 0;
+    box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
+    font-size: rem-calc(14);
+    line-height: rem-calc(21);
+    color: var(--color-gray-2);
+    background-color: #fff;
+    transition: 0.3s ease 0s;
+
+    @include xl-block {
+      padding: rem-calc(12) rem-calc(44);
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+
+  label {
+    margin-right: rem-calc(32);
+
+    button {
+      @include xl-block {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  label:focus-within input {
+    padding: rem-calc(12) rem-calc(44);
+    width: 100%;
+  }
+
+  @include xl-block {
+    max-width: rem-calc(473);
+  }
+}

@@ -25,31 +25,32 @@ $xs: rem-calc(320);
   --padding: 20px;
 
   // размеры
-  --s-8: rem-calc(8);
-  --s-14: rem-calc(14);
-  --s-16: rem-calc(16);
-  --s-18: rem-calc(18);
-  --s-20: rem-calc(20);
-  --s-24: rem-calc(24);
-  --s-28: rem-calc(28);
-  --s-30: rem-calc(30);
-  --s-32: rem-calc(32);
-  --s-40: rem-calc(40);
-  --s-44: rem-calc(44);
-  --s-48: rem-calc(48);
-  --s-56: rem-calc(56);
-  --s-80: rem-calc(80);
+  --s-8: 8px;
+  --s-14: 14px;
+  --s-16: 16px;
+  --s-18: 18px;
+  --s-20: 20px;
+  --s-24: 24px;
+  --s-28: 28px;
+  --s-30: 30px;
+  --s-32: 32px;
+  --s-40: 40px;
+  --s-44: 44px;
+  --s-48: 48px;
+  --s-56: 56px;
+  --s-80: 80px;
 
   // отступы
-  --extra-small-offset: var(--s-8);
-  --medium-offset: var(--s-16);
-  --large-offset: var(--s-24);
-  --grid-gap: var(--s-32);
-  --section-offset: var(--s-44);
-  --big-offset: var(--s-80);
+  --extra-small-offset: 8px;
+  --medium-offset: 16px;
+  --large-offset: 24px;
+  --grid-gap: 32px;
+  --section-offset: 44px;
+  --big-offset: 80px;
 
   // шрифты
   --font-family: "Gilroy", sans-serif;
+  --font-logo: 700 var(--s-24) / 29px var(--font-family);
   --font-heading-h1: 700 var(--s-56) / var(--s-67) var(--font-family);
   --font-heading-h2: 700 var(--s-40) / var(--s-48) var(--font-family);
   --font-text-500: 500 var(--s-20) / var(--s-30) var(--font-family);

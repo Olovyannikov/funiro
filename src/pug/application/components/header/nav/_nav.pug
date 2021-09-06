@@ -24,10 +24,10 @@
                     a(href='#').nav__link
                         | #{val.item}
                         span.nav__item-icon
-                            +svg(val.icon, 20, 20)
+                            +svg(val.icon, 12, 12)
                     if val.submenu
                         ul.nav__submenu
                             each item in val.submenu
-                                li.nav__submenu
-                                    a(href="#").nav__submenu-item
+                                li.nav__submenu-item
+                                    a(href="#").nav__submenu-link
                                         | #{item}

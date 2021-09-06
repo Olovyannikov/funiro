@@ -11,7 +11,6 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
     min-height: rem-calc(125);
     transform: translateX(-50%);
@@ -19,11 +18,20 @@
 
   &__main {
     display: flex;
-    flex: 0 0 494 / 1240 * 100%;
     align-items: center;
+
+    @include lg-block {
+      flex: 0 0 494 / 1240 * 100%;
+    }
   }
 
   &__logo {
+    margin-right: var(--s-24);
+    font: var(--font-logo);
+    color: var(--color-black);
+  }
 
+  &__search {
+    margin-left: auto;
   }
 }
