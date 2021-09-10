@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+import {navigation} from "./modules/navigation.module";
 
+document.addEventListener('DOMContentLoaded', () => {
+    navigation();
 });

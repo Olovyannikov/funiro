@@ -1,0 +1,23 @@
+.burger {
+  --burger-width: 24px;
+  --burger-height: 24px;
+  --burger-line-height: 2px;
+
+  @include burger;
+
+  z-index: 20;
+  display: flex;
+  flex-shrink: 0;
+  margin-left: 32px;
+
+  &--active {
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  @include lg-block {
+    display: none;
+  }
+}

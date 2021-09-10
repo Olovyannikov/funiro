@@ -9,11 +9,12 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--color-primary);
+  transition: 0.3s ease-in-out;
 
   &__list {
     min-width: rem-calc(315);
 
-    @include md-block {
+    @include lg-block {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -30,11 +31,15 @@
     padding: rem-calc(5) 0;
 
     &-icon {
-      display: flex;
+      display: none;
       margin-left: rem-calc(8);
       width: 12px;
       height: 12px;
       transition: all 0.3s ease;
+
+      @include lg-block {
+        display: flex;
+      }
     }
 
     &:hover {
@@ -51,7 +56,9 @@
 
       .nav__link,
       .nav__link svg {
-        color: var(--color-primary);
+        @include lg-block {
+          color: var(--color-primary);
+        }
       }
     }
   }
@@ -62,6 +69,7 @@
     font-weight: 500;
     color: inherit;
     transition: color 0.3s ease-in-out 0s;
+    pointer-events: none;
   }
 
   &__submenu {
@@ -70,7 +78,7 @@
     padding: rem-calc(15);
     background-color: var(--color-primary);
 
-    @include md-block {
+    @include lg-block {
       position: absolute;
       left: 0;
       top: 100%;
@@ -92,6 +100,10 @@
   &__submenu-link {
     line-height: 120%;
     color: var(--color-white);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.active {

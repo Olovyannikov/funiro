@@ -338,7 +338,8 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  background-color: #fff; }
   .header__container {
     position: fixed;
     left: 50%;
@@ -372,10 +373,11 @@ button {
   padding: 2.5rem;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-primary); }
+  background-color: var(--color-primary);
+  transition: 0.3s ease-in-out; }
   .nav__list {
     min-width: 19.6875rem; }
-    @media (min-width: 48rem) {
+    @media (min-width: 62rem) {
       .nav__list {
         display: flex;
         flex-wrap: wrap;
@@ -389,11 +391,14 @@ button {
     margin: 0 0.1875rem;
     padding: 0.3125rem 0; }
     .nav__item-icon {
-      display: flex;
+      display: none;
       margin-left: 0.5rem;
       width: 12px;
       height: 12px;
       transition: all 0.3s ease; }
+      @media (min-width: 62rem) {
+        .nav__item-icon {
+          display: flex; } }
     .nav__item:hover .nav__item-icon {
       transform: rotate(-180deg); }
     .nav__item:hover .nav__submenu {
@@ -401,21 +406,23 @@ button {
       visibility: visible;
       transform: translate(0, 0);
       pointer-events: all; }
-    .nav__item:hover .nav__link,
-    .nav__item:hover .nav__link svg {
-      color: var(--color-primary); }
+    @media (min-width: 62rem) {
+      .nav__item:hover .nav__link,
+      .nav__item:hover .nav__link svg {
+        color: var(--color-primary); } }
   .nav__link {
     display: flex;
     align-items: center;
     font-weight: 500;
     color: inherit;
-    transition: color 0.3s ease-in-out 0s; }
+    transition: color 0.3s ease-in-out 0s;
+    pointer-events: none; }
   .nav__submenu {
     position: relative;
     flex: 1 1 100%;
     padding: 0.9375rem;
     background-color: var(--color-primary); }
-    @media (min-width: 48rem) {
+    @media (min-width: 62rem) {
       .nav__submenu {
         position: absolute;
         left: 0;
@@ -431,6 +438,8 @@ button {
   .nav__submenu-link {
     line-height: 120%;
     color: var(--color-white); }
+    .nav__submenu-link:hover {
+      text-decoration: underline; }
   .nav.active {
     right: 0; }
   @media (min-width: 62rem) {
@@ -505,7 +514,10 @@ button {
     align-items: center;
     grid-auto-flow: column;
     grid-template-columns: auto;
-    gap: var(--s-32); }
+    gap: var(--s-16); }
+    @media (min-width: 62rem) {
+      .actions__list {
+        gap: var(--s-32); } }
   .actions__item {
     color: var(--color-deep-blue); }
     .actions__item svg {
@@ -539,5 +551,59 @@ button {
     line-height: 1;
     color: var(--color-white);
     background-color: var(--color-primary); }
+
+.burger {
+  --burger-width: 24px;
+  --burger-height: 24px;
+  --burger-line-height: 2px;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  flex-shrink: 0;
+  margin-left: 32px; }
+  .burger::before, .burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
+  .burger::before {
+    top: 0; }
+  .burger::after {
+    top: calc(100% - var(--burger-line-height)); }
+  .burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out; }
+  .burger--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
+  .burger--active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
+  .burger--active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out; }
+  .burger--active::before, .burger--active::after {
+    background-color: #fff; }
+  @media (min-width: 62rem) {
+    .burger {
+      display: none; } }
 
 /*# sourceMappingURL=style.min.css.map */

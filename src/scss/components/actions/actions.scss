@@ -7,7 +7,11 @@
     align-items: center;
     grid-auto-flow: column;
     grid-template-columns: auto;
-    gap: var(--s-32);
+    gap: var(--s-16);
+
+    @include lg-block {
+      gap: var(--s-32);
+    }
   }
 
   &__item {
