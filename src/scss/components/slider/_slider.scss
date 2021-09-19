@@ -1,0 +1,10 @@
+.slider {
+  position: relative;
+  z-index: 10;
+  margin-top: 100px;
+  margin-bottom: 88px;
+
+  @include md-block {
+    margin-top: 221px;
+  }
+}

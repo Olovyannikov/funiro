@@ -1,0 +1,51 @@
+section.slider
+    .slider__container
+        .slider__swiper.carousel.swiper
+            .carousel__wrapper.swiper-wrapper
+                .carousel__slide.swiper-slide
+                    picture
+                        source(srcset="img/slide-1.webp 1x, img/slide-1@2x.webp" type="image/webp")
+                        img(srcset="img/slide-1.jpeg 1x, img/slide-1@2x.jpeg" src="img/slide-1.jpeg")
+                    a(href='#').carousel__badge
+                        h3 Bohauss
+                        p Luxury big sofa 2-seat
+                        span Rp 17.000.000
+                            +svg('#arrow', 24, 24)
+                    .carousel__about
+                        h4 High-Quality Furniture Just For You
+                        p Our furniture is made from selected and best quality materials that are suitable for your dream home
+                        button.btn.btn--primary Shop Now
+                .carousel__slide.swiper-slide
+                    picture
+                        source(srcset="img/slide-2.webp 1x, img/slide-2@2x.webp" type="image/webp")
+                        img(srcset="img/slide-2.jpeg 1x, img/slide-2@2x.jpeg" src="img/slide-2.jpeg")
+                    a(href='#').carousel__badge
+                        h3 Bohauss
+                        p Luxury big sofa 2-seat
+                        span Rp 17.000.000
+                            +svg('#arrow', 24, 24)
+                    .carousel__about
+                        h4 High-Quality Furniture Just For You
+                        p Our furniture is made from selected and best quality materials that are suitable for your dream home
+                        button.btn.btn--primary Shop Now
+                .carousel__slide.swiper-slide
+                    picture
+                        source(srcset="img/slide-3.webp 1x, img/slide-3@2x.webp" type="image/webp")
+                        img(srcset="img/slide-3.jpeg 1x, img/slide-3@2x.jpeg" src="img/slide-3.jpeg")
+                    a(href='#').carousel__badge
+                        h3 Bohauss
+                        p Luxury big sofa 2-seat
+                        span Rp 17.000.000
+                            +svg('#arrow', 24, 24)
+                    .carousel__about
+                        h4 High-Quality Furniture Just For You
+                        p Our furniture is made from selected and best quality materials that are suitable for your dream home
+                        button.btn.btn--primary Shop Now
+            .container.carousel__container
+                .swiper-pagination.carousel__pagination
+                .carousel__controls
+                    button(type="button").carousel__prev
+                        +svg('#chevron', 20, 20)
+                    button(type="button").carousel__next
+                        +svg('#chevron', 20, 20)
+

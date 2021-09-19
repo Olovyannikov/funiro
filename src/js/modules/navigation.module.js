@@ -4,6 +4,6 @@ export const navigation = () => {
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('burger--active');
-        nav.classList.toggle('active')
-    })
+        nav.classList.toggle('active');
+    });
 }

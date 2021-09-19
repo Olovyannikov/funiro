@@ -8,86 +8,212 @@
     <title>Furniture Shop</title>
   </head>
   <body>
-    <header class="header" id="header">
-      <div class="header__container container">
-        <div class="header__main"><a class="header__logo">Funiro.</a>
-          <nav class="header__nav nav" id="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#">Products<span class="nav__item-icon">
-                    <svg width="12" height="12">
-                      <use href="img/sprite.svg#chevron"></use>
-                    </svg></span></a>
-                <ul class="nav__submenu">
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">item1</a></li>
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">lorem</a></li>
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">blah</a></li>
-                </ul>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="#">Rooms<span class="nav__item-icon">
-                    <svg width="12" height="12">
-                      <use href="img/sprite.svg#chevron"></use>
-                    </svg></span></a>
-                <ul class="nav__submenu">
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">item1</a></li>
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">lorem</a></li>
-                  <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">blah</a></li>
-                </ul>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="#">Inspirations<span class="nav__item-icon">
-                    <svg width="12" height="12">
-                      <use href="img/sprite.svgundefined"></use>
-                    </svg></span></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__search search">
-          <div class="search-form">
-            <form class="search-form__form">
-              <label>
-                <button class="search-form__btn" type="button">
-                  <svg width="20" height="20">
-                    <use href="img/sprite.svg#search"></use>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container container js-header">
+          <div class="header__main"><a class="header__logo">Funiro.</a>
+            <nav class="header__nav nav" id="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">Products<span class="nav__item-icon">
+                      <svg width="12" height="12">
+                        <use href="img/sprite.svg#chevron"></use>
+                      </svg></span></a>
+                  <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">item1</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">lorem</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">blah</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Rooms<span class="nav__item-icon">
+                      <svg width="12" height="12">
+                        <use href="img/sprite.svg#chevron"></use>
+                      </svg></span></a>
+                  <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">item1</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">lorem</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">blah</a></li>
+                  </ul>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Inspirations<span class="nav__item-icon">
+                      <svg width="12" height="12">
+                        <use href="img/sprite.svgundefined"></use>
+                      </svg></span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__search search">
+            <div class="search-form">
+              <form class="search-form__form">
+                <label>
+                  <button class="search-form__btn" type="button">
+                    <svg width="20" height="20">
+                      <use href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input class="search-form__input" autocomplete="off" type="text" placeholder="Search for minimalist chair" data-value="Search for minimalist chair"/>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="header__actions actions">
+            <ul class="actions__list">
+              <li class="actions__item">
+                <button class="actions__fav" type="button">
+                  <svg width="24" height="24">
+                    <use href="img/sprite.svg#heart"></use>
                   </svg>
                 </button>
-                <input class="search-form__input" autocomplete="off" type="text" placeholder="Search for minimalist chair" data-value="Search for minimalist chair"/>
-              </label>
-            </form>
+              </li>
+              <li class="actions__item">
+                <div class="action__cart cart">
+                  <button class="cart__btn" type="button">
+                    <svg width="24" height="24">
+                      <use href="img/sprite.svg#cart"></use>
+                    </svg><span>1</span>
+                  </button>
+                  <ul class="cart__list">
+                    <li class="cart__item"></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="actions__profile"><a class="actions__profile-link" href="#">
+                  <picture>
+                    <source srcset="img/avatar@2x.webp 2x, img/avatar.webp 1x" type="image/webp"/>
+                    <source srcset="img/avatar@2x.jpg 2x, img/avatar.jpg 1x" type="image/jpeg"/><img src="img/avatar.jpg" alt="User Avatar"/>
+                  </picture></a></li>
+            </ul>
           </div>
+          <button class="header__burger burger" type="button" aria-label="Управление меню" id="burger"><span class="burger__line"></span></button>
         </div>
-        <div class="header__actions actions">
-          <ul class="actions__list">
-            <li class="actions__item">
-              <button class="actions__fav" type="button">
-                <svg width="24" height="24">
-                  <use href="img/sprite.svg#heart"></use>
-                </svg>
-              </button>
-            </li>
-            <li class="actions__item">
-              <div class="action__cart cart">
-                <button class="cart__btn" type="button">
-                  <svg width="24" height="24">
-                    <use href="img/sprite.svg#cart"></use>
-                  </svg><span>1</span>
-                </button>
-                <ul class="cart__list">
-                  <li class="cart__item"></li>
+      </header>
+      <main class="main">
+        <section class="slider">
+          <div class="slider__container">
+            <div class="slider__swiper carousel swiper">
+              <div class="carousel__wrapper swiper-wrapper">
+                <div class="carousel__slide swiper-slide">
+                  <picture>
+                    <source srcset="img/slide-1.webp 1x, img/slide-1@2x.webp" type="image/webp"/><img srcset="img/slide-1.jpeg 1x, img/slide-1@2x.jpeg" src="img/slide-1.jpeg"/>
+                  </picture><a class="carousel__badge" href="#">
+                    <h3>Bohauss</h3>
+                    <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
+                      <svg width="24" height="24">
+                        <use href="img/sprite.svg#arrow"></use>
+                      </svg></span></a>
+                  <div class="carousel__about">
+                    <h4>High-Quality Furniture Just For You</h4>
+                    <p>Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                    <button class="btn btn--primary">Shop Now</button>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <picture>
+                    <source srcset="img/slide-2.webp 1x, img/slide-2@2x.webp" type="image/webp"/><img srcset="img/slide-2.jpeg 1x, img/slide-2@2x.jpeg" src="img/slide-2.jpeg"/>
+                  </picture><a class="carousel__badge" href="#">
+                    <h3>Bohauss</h3>
+                    <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
+                      <svg width="24" height="24">
+                        <use href="img/sprite.svg#arrow"></use>
+                      </svg></span></a>
+                  <div class="carousel__about">
+                    <h4>High-Quality Furniture Just For You</h4>
+                    <p>Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                    <button class="btn btn--primary">Shop Now</button>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <picture>
+                    <source srcset="img/slide-3.webp 1x, img/slide-3@2x.webp" type="image/webp"/><img srcset="img/slide-3.jpeg 1x, img/slide-3@2x.jpeg" src="img/slide-3.jpeg"/>
+                  </picture><a class="carousel__badge" href="#">
+                    <h3>Bohauss</h3>
+                    <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
+                      <svg width="24" height="24">
+                        <use href="img/sprite.svg#arrow"></use>
+                      </svg></span></a>
+                  <div class="carousel__about">
+                    <h4>High-Quality Furniture Just For You</h4>
+                    <p>Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                    <button class="btn btn--primary">Shop Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="container carousel__container">
+                <div class="swiper-pagination carousel__pagination"></div>
+                <div class="carousel__controls">
+                  <button class="carousel__prev" type="button">
+                    <svg width="20" height="20">
+                      <use href="img/sprite.svg#chevron"></use>
+                    </svg>
+                  </button>
+                  <button class="carousel__next" type="button">
+                    <svg width="20" height="20">
+                      <use href="img/sprite.svg#chevron"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__body">
+            <div class="footer__main"><a class="footer__logo footer-title" href="#">Funiro.</a>
+              <p class="footer__text">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
+              <div class="footer__contacts contacts"><a class="contacts__item" href="#">
+                  <svg width="20" height="20">
+                    <use href="img/sprite.svg#geo"></use>
+                  </svg>Sawojajar Malang, Indonesia</a><a class="contacts__item" href="tel:+62894563455">
+                  <svg width="20" height="20">
+                    <use href="img/sprite.svg#phone"></use>
+                  </svg>+6289 456 3455</a><a class="contacts__item" href="https://www.funiro.com" target="_blank">www.funiro.com</a></div>
+            </div>
+            <div class="footer__menu menu">
+              <div class="menu__col">
+                <h3 class="footer-title menu__title">Menu</h3>
+                <ul class="menu__list">
+                  <li><a class="menu__link" href="#">Products</a></li>
+                  <li><a class="menu__link" href="#">Rooms</a></li>
+                  <li><a class="menu__link" href="#">Inspirations</a></li>
+                  <li><a class="menu__link" href="#">About Us</a></li>
+                  <li><a class="menu__link" href="#">Terms & Policy</a></li>
                 </ul>
               </div>
-            </li>
-            <li class="actions__profile"><a class="actions__profile-link" href="#">
-                <picture>
-                  <source srcset="img/avatar@2x.webp 2x, img/avatar.webp 1x" type="image/webp"/>
-                  <source srcset="img/avatar@2x.jpg 2x, img/avatar.jpg 1x" type="image/jpeg"/><img src="img/avatar.jpg" alt="User Avatar"/>
-                </picture></a></li>
-          </ul>
+              <div class="menu__col">
+                <h3 class="footer-title menu__title">Account</h3>
+                <ul class="menu__list">
+                  <li><a class="menu__link" href="#">My Account</a></li>
+                  <li><a class="menu__link" href="#">Checkout</a></li>
+                  <li><a class="menu__link" href="#">My Cart</a></li>
+                  <li><a class="menu__link" href="#">My Catalog</a></li>
+                </ul>
+              </div>
+              <div class="menu__col">
+                <h3 class="footer-title menu__title">Stay Connected</h3>
+                <ul class="menu__list">
+                  <li><a class="menu__link" href="#">Facebook</a></li>
+                  <li><a class="menu__link" href="#">Instagram</a></li>
+                  <li><a class="menu__link" href="#">Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__subscribe subscribe">
+              <h3 class="subscribe__title footer-title">Stay Updated</h3>
+              <form class="subscribe__form">
+                <input class="subscribe__input input" placeholder="Enter your email" required="required" type="email"/>
+                <button class="subscribe__button" type="submit">
+                  <svg width="24" height="24">
+                    <use href="img/sprite.svg#send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-        <button class="header__burger burger" type="button" aria-label="Управление меню" id="burger"><span class="burger__line"></span></button>
-      </div>
-    </header>
-    <main class="main">
-    </main>
+      </footer>
+    </div>
     <script src="js/script.min.js"></script>
   </body>
 </html>

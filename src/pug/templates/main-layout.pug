@@ -12,8 +12,9 @@ html(lang="ru")
         title #{title}
 
     body
-        include ../application/components/header/_header
-        main.main
-            block content
-        include ../application/components/footer/_footer
+        .wrapper
+            include ../application/components/header/_header
+            main.main
+                block content
+            include ../application/components/footer/_footer
         script(src="js/script.min.js")

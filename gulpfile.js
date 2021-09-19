@@ -162,6 +162,7 @@ const fonts = () => {
 
 const images = () => {
     return src(path.src.img)
+        .pipe(dest(path.build.img))
         .pipe(webp())
         .pipe(gulpif(isProd, image()))
         .pipe(dest(path.build.img))

@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  margin-bottom: 40px;
+  gap: 40px;
+
+  &__col {
+    flex: 0 1 33.3%;
+  }
+
+  &__title {
+    margin-bottom: rem-calc(16);
+  }
+
+  &__list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: var(--s-16);
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--color-gray-2);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  @include sm-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include md-block {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+}

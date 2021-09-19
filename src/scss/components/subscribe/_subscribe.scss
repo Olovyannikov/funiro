@@ -1,0 +1,55 @@
+.subscribe {
+  grid-column: span 2;
+
+  &__title {
+    margin-bottom: rem-calc(16);
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+    flex: 0 0 45px;
+    align-items: center;
+    justify-content: center;
+    margin-left: rem-calc(4);
+    height: 45px;
+    font-size: rem-calc(18);
+    color: var(--color-gray-1);
+    background-color: var(--color-primary);
+    transition: 0.3s ease-in-out;
+
+    svg {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken(#e89f71, 10%);
+    }
+  }
+
+  &__input {
+    padding: rem-calc(10) rem-calc(12);
+    height: auto;
+    font: var(--font-small-500);
+    font-weight: 400;
+    background-color: #f4f5f7;
+
+    &::placeholder {
+      color: var(--color-gray-3);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 2px 2px var(--color-primary);
+    }
+  }
+
+  @include md-block {
+    grid-column: auto;
+  }
+}
