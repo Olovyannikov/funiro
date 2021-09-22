@@ -8,6 +8,12 @@
   }
 }
 
+@mixin xxl-block {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin xl-block {
   @media (min-width: ($xl)) {
     @content;

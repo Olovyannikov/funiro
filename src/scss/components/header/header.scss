@@ -4,11 +4,9 @@
   top: 0;
   width: 100%;
   height: 125px;
-  background-color: #fff;
   z-index: 100;
 
   &__container {
-    background-color: #fff;
     position: fixed;
     left: 50%;
     top: 0;
@@ -25,17 +23,24 @@
       width: calc(100% + 100%);
       height: 100%;
       position: absolute;
-      background-color: #fff;
+      background-color: transparent;
       left: -50%;
       right: 50%;
       top: 0;
       bottom: 0;
       z-index: -1;
+      transition: 0.5s ease-in-out;
     }
 
     &.out {
-    transform: translateX(-50%) translateY(-100%);
-  }
+      transform: translateX(-50%) translateY(-100%);
+    }
+
+    &:hover {
+      &::after {
+        background-color: #fff;
+      }
+    }
   }
 
   &__main {

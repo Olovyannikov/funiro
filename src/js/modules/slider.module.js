@@ -12,7 +12,7 @@ export const swiper = new Swiper('.carousel', {
         clickable: true
     },
     breakpoints: {
-        1200: {
+        1600: {
             slidesPerView: 'auto',
             navigation: {
                 nextEl: '.carousel__next',

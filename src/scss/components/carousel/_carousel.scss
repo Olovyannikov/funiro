@@ -3,17 +3,17 @@
   flex-direction: column;
   align-items: center;
 
-  @include xl-block {
+  @include xxl-block {
     align-items: flex-end;
   }
 
   &__wrapper {
     display: flex;
     width: 100%;
-    max-width: 934px;
 
-    @include xl-block {
+    @include xxl-block {
       padding-left: 90px;
+      max-width: 934px;
     }
   }
 
@@ -21,6 +21,7 @@
     position: relative;
 
     img {
+      width: 100%;
       min-height: 300px;
       object-fit: cover;
 
@@ -29,8 +30,15 @@
       }
     }
 
-    @include xl-block {
+    @include xxl-block {
       height: auto;
+
+      &.swiper-slide-prev {
+        .carousel__badge {
+          opacity: 1;
+          right: 40px;
+        }
+      }
     }
   }
 
@@ -84,14 +92,14 @@
       }
     }
 
-    @include xl-block {
+    @include xxl-block {
       margin-right: auto;
       margin-left: auto;
     }
   }
 
   &__container {
-    @include xl-block {
+    @include xxl-block {
       display: flex;
       order: -1;
       margin: 0 auto 22px;
@@ -148,7 +156,7 @@
       }
     }
 
-    @include xl-block {
+    @include xxl-block {
       display: grid;
       grid-template-columns: repeat(2, 48px);
       gap: 0.5rem;
@@ -171,7 +179,7 @@
       font-size: 20px;
     }
 
-    @include xl-block {
+    @include xxl-block {
       position: absolute;
       padding: 60px;
       visibility: hidden;
@@ -230,13 +238,16 @@
       color: var(--color-gray-1);
     }
 
-    @include xl-block {
+    @include xxl-block {
       content: "";
+      width: 292px;
       position: absolute;
-      right: 40px;
+      right: -100%;
       bottom: 40px;
       z-index: 21;
       margin-top: 0;
+      opacity: 0;
+      transition: 1.5s ease-in-out;
     }
   }
 }

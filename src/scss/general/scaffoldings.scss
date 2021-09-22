@@ -28,7 +28,7 @@ body {
     top: 0;
     z-index: 2;
     width: 100%;
-    height: 774px;
+    height: 775px;
     max-width: 964px;
     background-color: #f9f1e7;
   }
@@ -38,7 +38,7 @@ body {
     top: 0;
     z-index: 1;
     width: 100%;
-    height: 774px;
+    height: 775px;
     max-width: 1300px;
     background-color: #fcf8f3;
   }
@@ -98,8 +98,8 @@ button {
 .btn {
   @include btn-reset;
 
-  font: inherit;
   padding: 24px 10px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
@@ -115,31 +115,35 @@ button {
   }
 
   &--secondary {
-    color: var(--color-white);
-    background-color: var(--color-main);
-
-    &:hover {
-      background-color: var(--color-main-hover);
-    }
-  }
-
-  &--thirdly {
-    border: 1px solid var(--color-main);
-    padding: 13px 45px;
-    color: var(--color-main);
-    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    text-align: center;
+    color: var(--color-primary);
+    background-color: var(--color-white);
 
     &:hover {
       color: var(--color-white);
-      background-color: var(--color-main);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &--light {
+    border: 1px solid transparent;
+    padding: 0 15px;
+    color: var(--color-primary);
+    background-color: #fff;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-primary);
     }
   }
 }
 
 .title {
-  margin: 0 0 var(--main-offset);
-  font: var(--middle-high-bold);
-  color: var(--color-main);
+  margin: 0 0 var(--s-32);
+  font: var(--font-heading-h2);
+  text-align: center;
+  color: var(--color-gray-1);
 }
 
 @import "mixins";
