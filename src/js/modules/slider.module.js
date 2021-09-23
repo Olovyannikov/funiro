@@ -1,6 +1,6 @@
 import Swiper from "swiper/swiper-bundle";
 
-export const swiper = new Swiper('.carousel', {
+export const carousel = new Swiper('.carousel', {
     slidesPerView: "auto",
     centeredSlides: true,
     loop: true,

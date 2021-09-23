@@ -34,6 +34,7 @@ let path = {
 };
 
 const {src, dest, series, watch} = require('gulp');
+const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
@@ -60,6 +61,14 @@ const webp = require('gulp-webp');
 const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const {readFileSync} = require('fs');
+const yargs = require("yargs");
+const debug = require("gulp-debug");
+
+const webpackConfig = require("./webpack.config.js"),
+    argv = yargs.argv,
+    production = !!argv.production;
+webpackConfig.mode = production ? "production" : "development";
+webpackConfig.devtool = production ? false : "source-map";
 
 let isProd = false; // dev by default
 let isGrid = false; // smartgrid or not
@@ -110,43 +119,15 @@ const stylesBackend = () => {
 };
 
 const scripts = () => {
-    return src(path.src.js)
-        .pipe(
-            webpackStream({
-                mode: "production",
-                output: {
-                    filename: "script.js",
-                },
-                module: {
-                    rules: [
-                        {
-                            test: /\.m?js$/,
-                            exclude: /(node_modules|bower_components)/,
-                            use: {
-                                loader: "babel-loader",
-                                options: {
-                                    presets: ["@babel/preset-env"],
-                                },
-                            },
-                        },
-                    ],
-                },
-                plugins: [
-                    new webpack.ContextReplacementPlugin(
-                        /moment[/\\]locale$/,
-                        /ru/
-                    ),
-                ],
-            })
-        )
-        .pipe(dest(path.build.js))
-        .pipe(uglify())
-        .pipe(
-            rename({
-                extname: ".min.js",
-            })
-        )
-        .pipe(dest(path.build.js))
+    return src(source_folder + '/js')
+        .pipe(webpackStream(webpackConfig), webpack)
+        .pipe(gulpif(production, rename({
+            suffix: ".min"
+        })))
+        .pipe(dest(project_folder + '/js'))
+        .pipe(debug({
+            "title": "JS files"
+        }))
         .pipe(browserSync.stream());
 }
 

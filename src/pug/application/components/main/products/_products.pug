@@ -2,34 +2,46 @@
     var prods = [
         {
             "id": 1,
-            "isSale": "-30%",
-            isNew: true,
             "title": "Syltherine",
             text: "Stylish cafe chair",
             price: "Rp 2.500.000",
-            oldPrice: "Rp 3.500.000"
+            oldPrice: "Rp 3.500.000",
+            labels: [
+                {type: "new", value: "New"}
+            ]
         },
-        {"id": 2, title: "Leviosa", text: "Stylish cafe chair", price: "Rp 2.500.000", oldPrice: "Rp 3.500.000"},
+        {
+            "id": 2,
+            title: "Leviosa",
+            text: "Stylish cafe chair",
+            price: "Rp 2.500.000",
+            oldPrice: "Rp 3.500.000",
+            labels: [
+                {type: "", value: ""}
+            ]
+        },
         {
             "id": 3,
             "isSale": "-50%",
             title: "Lolito",
             text: "Luxury big sofa",
             price: "Rp 7.000.000",
-            oldPrice: "Rp 14.000.000"
+            oldPrice: "Rp 14.000.000",
+            labels: [
+                {type: "new", value: "New"},
+                {type: "sale", value: "-50%"}
+            ]
         },
-        {"id": 4, "isNew": true, title: "Respira", text: "Minimalist fan", price: "Rp 500.000", oldPrice: ""},
-        {"id": 5, title: "Grifo", text: "Night Lamp", price: "Rp 1.500.000", oldPrice: ""},
-        {"id": 6, "isNew": true, title: "Muggo", text: "Small mug", price: "Rp 150.000", oldPrice: ""},
         {
-            "id": 7,
-            "isSale": "-50%",
-            title: "Pingky",
-            text: "Cute bed set",
-            price: "Rp 7.000.000",
-            oldPrice: "Rp 14.000.000"
+            "id": 4,
+            title: "Respira",
+            text: "Minimalist fan",
+            price: "Rp 500.000",
+            oldPrice: "",
+            labels: [
+                {type: "sale", value: "-30%"}
+            ]
         },
-        {"id": 8, "isNew": true, title: "Potty", text: "Minimalist flower pot", price: "Rp 500.000", oldPrice: ""},
     ];
 
 .products
@@ -40,10 +52,8 @@
             each product in prods
                 article(data-pid=product.id).products__item.item-product
                     .item-product__labels
-                        if product.isSale
-                            span.item-product__label.item-product__label--sale -30%
-                        if product.isNew
-                            span.item-product__label.item-product__label--new New
+                        each label in product.labels
+                            span.item-product__label(class=`item-product__label--` + label.type) #{label.value}
                     a(href="#").item-product__image
                         picture
                             source(
@@ -72,4 +82,4 @@
                                     +svg("#heart", 24, 24)
                                     | Like
         .products__footer
-            button.btn.btn--secondary Show More
+            button.btn.btn--secondary#more Show More
