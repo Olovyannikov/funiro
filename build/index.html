@@ -67,14 +67,19 @@
               </li>
               <li class="actions__item">
                 <div class="action__cart cart">
-                  <button class="cart__btn" type="button">
+                  <button class="cart__btn" type="button" disabled="disabled">
                     <svg width="24" height="24">
                       <use href="img/sprite.svg#cart"></use>
-                    </svg><span>1</span>
+                    </svg><span class="cart__count">0</span>
                   </button>
-                  <ul class="cart__list">
-                    <li class="cart__item"></li>
-                  </ul>
+                  <div class="mini-cart">
+                    <div class="mini-cart__top">
+                      <ul class="mini-cart__list list-reset"></ul>
+                    </div>
+                    <div class="mini-cart__bottom">
+                      <div class="mini-cart__total"><span class="mini-cart__txt">Итого:</span><span class="mini-cart__sum">0 р</span></div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="actions__profile"><a class="actions__profile-link" href="#">
@@ -217,13 +222,15 @@
                   <div class="item-product__prices"><span class="item-product__price">Rp 2.500.000</span><span class="item-product__price item-product__price--old">Rp 3.500.000</span>
                   </div>
                   <div class="item-product__actions actions-product">
-                    <div class="actions-product__body"><a class="actions-product__button btn btn--light" href="#">Add to cart</a><a class="actions-product__link" href="#">
+                    <div class="actions-product__body">
+                      <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
-                        </svg>Like</a></div>
+                        </svg>Like</a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -241,13 +248,15 @@
                   <div class="item-product__prices"><span class="item-product__price">Rp 2.500.000</span><span class="item-product__price item-product__price--old">Rp 3.500.000</span>
                   </div>
                   <div class="item-product__actions actions-product">
-                    <div class="actions-product__body"><a class="actions-product__button btn btn--light" href="#">Add to cart</a><a class="actions-product__link" href="#">
+                    <div class="actions-product__body">
+                      <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
-                        </svg>Like</a></div>
+                        </svg>Like</a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -265,13 +274,15 @@
                   <div class="item-product__prices"><span class="item-product__price">Rp 7.000.000</span><span class="item-product__price item-product__price--old">Rp 14.000.000</span>
                   </div>
                   <div class="item-product__actions actions-product">
-                    <div class="actions-product__body"><a class="actions-product__button btn btn--light" href="#">Add to cart</a><a class="actions-product__link" href="#">
+                    <div class="actions-product__body">
+                      <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
-                        </svg>Like</a></div>
+                        </svg>Like</a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -289,17 +300,20 @@
                   <div class="item-product__prices"><span class="item-product__price">Rp 500.000</span>
                   </div>
                   <div class="item-product__actions actions-product">
-                    <div class="actions-product__body"><a class="actions-product__button btn btn--light" href="#">Add to cart</a><a class="actions-product__link" href="#">
+                    <div class="actions-product__body">
+                      <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
                         <svg width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
-                        </svg>Like</a></div>
+                        </svg>Like</a>
+                    </div>
                   </div>
                 </div>
               </article>
             </div>
+            <div class="catalog-list products__items"></div>
             <div class="products__footer">
               <button class="btn btn--secondary" id="more">Show More</button>
             </div>
@@ -365,5 +379,7 @@
     </div>
     <script src="js/main.min.js"></script>
     <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
   </body>
 </html>

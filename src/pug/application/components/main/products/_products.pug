@@ -74,12 +74,13 @@
                                 span.item-product__price.item-product__price--old #{product.oldPrice}
                         .item-product__actions.actions-product
                             .actions-product__body
-                                a(href="#").actions-product__button.btn.btn--light Add to cart
+                                button(type="button").actions-product__button.btn.btn--light.js-cart Add to cart
                                 a(href="#").actions-product__link
                                     +svg("#share", 24, 24)
                                     | Share
                                 a(href="#").actions-product__link
                                     +svg("#heart", 24, 24)
                                     | Like
+        .catalog-list.products__items
         .products__footer
             button.btn.btn--secondary#more Show More
