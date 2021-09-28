@@ -3,10 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-  @include xxl-block {
-    align-items: flex-end;
-  }
-
   &__wrapper {
     display: flex;
     width: 100%;
@@ -35,21 +31,22 @@
 
       &.swiper-slide-prev {
         .carousel__badge {
-          opacity: 1;
           right: 40px;
+          opacity: 1;
         }
       }
     }
   }
 
-  &__pagination {
+  &__pagination,
+  .slider-pagination {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     padding-bottom: 20px;
 
-    .swiper-pagination-bullet {
+    .swiper-pagination-bullet, {
       display: block;
       border-radius: 50%;
       width: 11px;
@@ -181,17 +178,17 @@
 
     @include xxl-block {
       position: absolute;
+      left: -200%;
       padding: 60px;
       visibility: hidden;
-      left: -200%;
       transition: 0.8s ease-in-out;
 
       .swiper-slide-prev & {
-        z-index: 22;
-        top: -83px;
         left: -398px;
-        visibility: visible;
+        top: -83px;
+        z-index: 22;
         max-width: 494px;
+        visibility: visible;
 
         h4 {
           margin: 0 0 1rem;
@@ -202,8 +199,8 @@
         }
 
         p {
-          max-width: 357px;
           margin: 0 0 var(--s-48);
+          max-width: 357px;
           font: var(--font-text-500);
           color: var(--color-gray-3);
         }
@@ -240,14 +237,18 @@
 
     @include xxl-block {
       content: "";
-      width: 292px;
       position: absolute;
       right: -100%;
       bottom: 40px;
       z-index: 21;
       margin-top: 0;
+      width: 292px;
       opacity: 0;
       transition: 1.5s ease-in-out;
     }
+  }
+
+  @include xxl-block {
+    align-items: flex-end;
   }
 }

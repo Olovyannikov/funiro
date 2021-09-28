@@ -1,0 +1,74 @@
+section.main__rooms.rooms
+    .container.rooms__container
+        .rooms__body
+            h2.title.rooms__title 50+ Beautiful rooms inspiration
+            p.rooms__text Our designer already made a lot of beautiful prototype of rooms that inspire you
+            a(href="#").rooms__button.btn Explore More
+        .rooms__slider.slider-rooms
+            .slider-rooms__body.swiper
+                .swiper-wrapper
+                    .slider-rooms__slide.swiper-slide
+                        .slider-rooms__image
+                            picture
+                                source(
+                                    srcset="img/room-1@2x.webp 2x, img/room-1.webp" type="image/webp"
+                                )
+                                img(
+                                    srcset="img/room-1@2x.jpeg 2x"
+                                    src="img/room-1.jpg"
+                                    alt="Room"
+                                )
+                        a(href="#").slider-rooms__content
+                            .slider-rooms__label.label-slider
+                                .label-slider__number 01
+                                .label-slider__line
+                                .label-slider__text Bed Room
+                            h5.slider-rooms__title Inner Peace
+                            .slider-rooms__arrow
+                                +svg('arrow', 24, 24)
+
+                    .slider-rooms__slide.swiper-slide
+                        .slider-rooms__image
+                            picture
+                                source(
+                                    srcset="img/room-2@2x.webp 2x, img/room-2.webp" type="image/webp"
+                                )
+                                img(
+                                    srcset="img/room-2@2x.jpeg 2x"
+                                    src="img/room-2.jpg"
+                                    alt="Room"
+                                )
+                        a(href="#").slider-rooms__content
+                            .slider-rooms__label.label-slider
+                                .label-slider__number 02
+                                .label-slider__line
+                                .label-slider__text Bed Room
+                            h5.slider-rooms__title Inner Peace
+                            .slider-rooms__arrow
+                                +svg('arrow', 24, 24)
+
+                    .slider-rooms__slide.swiper-slide
+                        .slider-rooms__image
+                            picture
+                                source(
+                                    srcset="img/room-3@2x.webp 2x, img/room-3.webp" type="image/webp"
+                                )
+                                img(
+                                    srcset="img/room-3@2x.jpeg 2x"
+                                    src="img/room-3.jpg"
+                                    alt="Room"
+                                )
+                        a(href="#").slider-rooms__content
+                            .slider-rooms__label.label-slider
+                                .label-slider__number 03
+                                .label-slider__line
+                                .label-slider__text Bed Room
+                            h5.slider-rooms__title Inner Peace
+                            .slider-rooms__arrow
+                                +svg('arrow', 24, 24)
+            .slider-rooms__controls.slider-controls
+                button(type="button").slider-arrow.slider-arrow--prev
+                    +svg('chevron', 20, 20)
+                button(type="button").slider-arrow.slider-arrow--next
+                    +svg('chevron', 20, 20)
+            .slider-rooms__bullets.slider-pagination

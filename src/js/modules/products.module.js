@@ -1,7 +1,7 @@
 export const products = () => {
     const catalogList = document.querySelector('.catalog-list');
     const catalogMore = document.querySelector('#more');
-    let prodQuantity = 0;
+    let prodQuantity = 3;
     let dataLength = null;
 
     const normalPrice = str => {
@@ -26,9 +26,9 @@ export const products = () => {
                             catalogList.innerHTML += `
                                 <article class="products__item item-product" data-pid="${item.id}">
                                     <div class="item-product__labels">
-                                    <span class="item-product__label item-product__label--new">New</span>
-                                    ${item.labels.map(label => `<span class="item-product__label item-product__label--${label.type}">${label.value}</span>`)}
-                                    </div><a class="item-product__image" href="#">
+                                        ${item.labels.map(label => `<span class="item-product__label item-product__label--${label.type}">${label.value}</span>`)}
+                                    </div>
+                                    <a class="item-product__image" href="#">
                                       <picture>
                                         <source srcset="img/product-${item.id}@2x.webp 2x,img/product-${item.id}.webp" type="image/webp">
                                         <img srcset="img/product-${item.id}@2x.jpeg 2x" src="img/product-${item.id}.jpeg">
@@ -77,7 +77,7 @@ export const products = () => {
             } else {
                 catalogMore.style.display = 'block';
             }
-        })
+        });
     }
 
     /* Cart */
@@ -90,11 +90,11 @@ export const products = () => {
     const priceWithoutSpaces = str => str.replace(/\s/g, '');
     const plusFullPrice = currentPrice => price += currentPrice;
     const minusFullPrice = currentPrice => price -= currentPrice;
-    const printFullPrice = () => fullPrice.textContent = `${normalPrice(price)} р`;
+    const printFullPrice = () => fullPrice.textContent = `Rp ${normalPrice(price)}`;
     const printQuantity = (num) => cartCount.textContent = num;
 
-    const loadCartData = async (id = 1) => {
-        await fetch('./../assets/db.json')
+    const loadCartData = (id = 1) => {
+        fetch('./../assets/db.json')
             .then((response) => {
                 return response.json();
             })
@@ -112,19 +112,17 @@ export const products = () => {
                                         </div>
                                         <button class="btn-reset mini-product__delete" aria-label="Удалить товар">
                                             Удалить
-                                            <svg>
-                                                <use href="img/sprite.svg#trash"></use>
-                                            </svg>
                                         </button>
                                     </div>
                                 </article>
                             </li>
                         `);
 
-                        return dataItem
+                        return dataItem;
                     }
                 }
-            }).then((item) => {
+            })
+            .then((item) => {
                 plusFullPrice(item.price);
                 printFullPrice();
                 let num = document.querySelectorAll('.mini-cart__list .mini-cart__item').length;

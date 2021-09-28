@@ -15,7 +15,7 @@
             <nav class="header__nav nav" id="nav">
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="#">Products<span class="nav__item-icon">
-                      <svg width="12" height="12">
+                      <svg id="chevron-icon" width="12" height="12">
                         <use href="img/sprite.svg#chevron"></use>
                       </svg></span></a>
                   <ul class="nav__submenu">
@@ -25,7 +25,7 @@
                   </ul>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="#">Rooms<span class="nav__item-icon">
-                      <svg width="12" height="12">
+                      <svg id="chevron-icon" width="12" height="12">
                         <use href="img/sprite.svg#chevron"></use>
                       </svg></span></a>
                   <ul class="nav__submenu">
@@ -35,8 +35,8 @@
                   </ul>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="#">Inspirations<span class="nav__item-icon">
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svgundefined"></use>
+                      <svg id="undefined-icon" width="12" height="12">
+                        <use href="img/sprite.svg#undefined"></use>
                       </svg></span></a>
                 </li>
               </ul>
@@ -47,7 +47,7 @@
               <form class="search-form__form">
                 <label>
                   <button class="search-form__btn" type="button">
-                    <svg width="20" height="20">
+                    <svg id="search-icon" width="20" height="20">
                       <use href="img/sprite.svg#search"></use>
                     </svg>
                   </button>
@@ -60,7 +60,7 @@
             <ul class="actions__list">
               <li class="actions__item">
                 <button class="actions__fav" type="button">
-                  <svg width="24" height="24">
+                  <svg id="heart-icon" width="24" height="24">
                     <use href="img/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -68,7 +68,7 @@
               <li class="actions__item">
                 <div class="action__cart cart">
                   <button class="cart__btn" type="button" disabled="disabled">
-                    <svg width="24" height="24">
+                    <svg id="cart-icon" width="24" height="24">
                       <use href="img/sprite.svg#cart"></use>
                     </svg><span class="cart__count">0</span>
                   </button>
@@ -103,7 +103,7 @@
                   </picture><a class="carousel__badge" href="#">
                     <h3>Bohauss</h3>
                     <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
-                      <svg width="24" height="24">
+                      <svg id="arrow-icon" width="24" height="24">
                         <use href="img/sprite.svg#arrow"></use>
                       </svg></span></a>
                   <div class="carousel__about">
@@ -118,7 +118,7 @@
                   </picture><a class="carousel__badge" href="#">
                     <h3>Bohauss</h3>
                     <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
-                      <svg width="24" height="24">
+                      <svg id="arrow-icon" width="24" height="24">
                         <use href="img/sprite.svg#arrow"></use>
                       </svg></span></a>
                   <div class="carousel__about">
@@ -133,7 +133,7 @@
                   </picture><a class="carousel__badge" href="#">
                     <h3>Bohauss</h3>
                     <p>Luxury big sofa 2-seat</p><span>Rp 17.000.000
-                      <svg width="24" height="24">
+                      <svg id="arrow-icon" width="24" height="24">
                         <use href="img/sprite.svg#arrow"></use>
                       </svg></span></a>
                   <div class="carousel__about">
@@ -147,12 +147,12 @@
                 <div class="swiper-pagination carousel__pagination"></div>
                 <div class="carousel__controls">
                   <button class="carousel__prev" type="button">
-                    <svg width="20" height="20">
+                    <svg id="chevron-icon" width="20" height="20">
                       <use href="img/sprite.svg#chevron"></use>
                     </svg>
                   </button>
                   <button class="carousel__next" type="button">
-                    <svg width="20" height="20">
+                    <svg id="chevron-icon" width="20" height="20">
                       <use href="img/sprite.svg#chevron"></use>
                     </svg>
                   </button>
@@ -167,7 +167,7 @@
             <ul class="advantages__list list-reset">
               <li class="advantages__item">
                 <div class="advantages__icon">
-                  <svg width="33" height="40">
+                  <svg id="trophy-icon" width="33" height="40">
                     <use href="img/sprite.svg#trophy"></use>
                   </svg>
                 </div>
@@ -176,7 +176,7 @@
               </li>
               <li class="advantages__item">
                 <div class="advantages__icon">
-                  <svg width="44" height="40">
+                  <svg id="guarantee-icon" width="44" height="40">
                     <use href="img/sprite.svg#guarantee"></use>
                   </svg>
                 </div>
@@ -185,7 +185,7 @@
               </li>
               <li class="advantages__item">
                 <div class="advantages__icon">
-                  <svg width="52" height="40">
+                  <svg id="shipping-icon" width="52" height="40">
                     <use href="img/sprite.svg#shipping"></use>
                   </svg>
                 </div>
@@ -194,7 +194,7 @@
               </li>
               <li class="advantages__item">
                 <div class="advantages__icon">
-                  <svg width="48" height="40">
+                  <svg id="customer-support-icon" width="48" height="40">
                     <use href="img/sprite.svg#customer-support"></use>
                   </svg>
                 </div>
@@ -224,10 +224,10 @@
                   <div class="item-product__actions actions-product">
                     <div class="actions-product__body">
                       <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="share-icon" width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="heart-icon" width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
                         </svg>Like</a>
                     </div>
@@ -250,10 +250,10 @@
                   <div class="item-product__actions actions-product">
                     <div class="actions-product__body">
                       <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="share-icon" width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="heart-icon" width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
                         </svg>Like</a>
                     </div>
@@ -276,10 +276,10 @@
                   <div class="item-product__actions actions-product">
                     <div class="actions-product__body">
                       <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="share-icon" width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="heart-icon" width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
                         </svg>Like</a>
                     </div>
@@ -302,10 +302,10 @@
                   <div class="item-product__actions actions-product">
                     <div class="actions-product__body">
                       <button class="actions-product__button btn btn--light js-cart" type="button">Add to cart</button><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="share-icon" width="24" height="24">
                           <use href="img/sprite.svg#share"></use>
                         </svg>Share</a><a class="actions-product__link" href="#">
-                        <svg width="24" height="24">
+                        <svg id="heart-icon" width="24" height="24">
                           <use href="img/sprite.svg#heart"></use>
                         </svg>Like</a>
                     </div>
@@ -319,17 +319,98 @@
             </div>
           </div>
         </div>
+        <section class="main__rooms rooms">
+          <div class="container rooms__container">
+            <div class="rooms__body">
+              <h2 class="title rooms__title">50+ Beautiful rooms inspiration</h2>
+              <p class="rooms__text">Our designer already made a lot of beautiful prototype of rooms that inspire you</p><a class="rooms__button btn" href="#">Explore More</a>
+            </div>
+            <div class="rooms__slider slider-rooms">
+              <div class="slider-rooms__body swiper">
+                <div class="swiper-wrapper">
+                  <div class="slider-rooms__slide swiper-slide">
+                    <div class="slider-rooms__image">
+                      <picture>
+                        <source srcset="img/room-1@2x.webp 2x, img/room-1.webp" type="image/webp"/><img srcset="img/room-1@2x.jpeg 2x" src="img/room-1.jpg" alt="Room"/>
+                      </picture>
+                    </div><a class="slider-rooms__content" href="#">
+                      <div class="slider-rooms__label label-slider">
+                        <div class="label-slider__number">01</div>
+                        <div class="label-slider__line"></div>
+                        <div class="label-slider__text">Bed Room</div>
+                      </div>
+                      <h5 class="slider-rooms__title">Inner Peace</h5>
+                      <div class="slider-rooms__arrow">
+                        <svg id="arrow-icon" width="24" height="24">
+                          <use href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div></a>
+                  </div>
+                  <div class="slider-rooms__slide swiper-slide">
+                    <div class="slider-rooms__image">
+                      <picture>
+                        <source srcset="img/room-2@2x.webp 2x, img/room-2.webp" type="image/webp"/><img srcset="img/room-2@2x.jpeg 2x" src="img/room-2.jpg" alt="Room"/>
+                      </picture>
+                    </div><a class="slider-rooms__content" href="#">
+                      <div class="slider-rooms__label label-slider">
+                        <div class="label-slider__number">02</div>
+                        <div class="label-slider__line"></div>
+                        <div class="label-slider__text">Bed Room</div>
+                      </div>
+                      <h5 class="slider-rooms__title">Inner Peace</h5>
+                      <div class="slider-rooms__arrow">
+                        <svg id="arrow-icon" width="24" height="24">
+                          <use href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div></a>
+                  </div>
+                  <div class="slider-rooms__slide swiper-slide">
+                    <div class="slider-rooms__image">
+                      <picture>
+                        <source srcset="img/room-3@2x.webp 2x, img/room-3.webp" type="image/webp"/><img srcset="img/room-3@2x.jpeg 2x" src="img/room-3.jpg" alt="Room"/>
+                      </picture>
+                    </div><a class="slider-rooms__content" href="#">
+                      <div class="slider-rooms__label label-slider">
+                        <div class="label-slider__number">03</div>
+                        <div class="label-slider__line"></div>
+                        <div class="label-slider__text">Bed Room</div>
+                      </div>
+                      <h5 class="slider-rooms__title">Inner Peace</h5>
+                      <div class="slider-rooms__arrow">
+                        <svg id="arrow-icon" width="24" height="24">
+                          <use href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-rooms__controls slider-controls">
+                <button class="slider-arrow slider-arrow--prev" type="button">
+                  <svg id="chevron-icon" width="20" height="20">
+                    <use href="img/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+                <button class="slider-arrow slider-arrow--next" type="button">
+                  <svg id="chevron-icon" width="20" height="20">
+                    <use href="img/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider-rooms__bullets slider-pagination"></div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer__body">
             <div class="footer__main"><a class="footer__logo footer-title" href="#">Funiro.</a>
-              <p class="footer__text">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
+              <p class="footer__text">Worldwide furniture store since 2020. We sell over 1000+ branded productsModule on our website</p>
               <div class="footer__contacts contacts"><a class="contacts__item" href="#">
-                  <svg width="20" height="20">
+                  <svg id="geo-icon" width="20" height="20">
                     <use href="img/sprite.svg#geo"></use>
                   </svg>Sawojajar Malang, Indonesia</a><a class="contacts__item" href="tel:+62894563455">
-                  <svg width="20" height="20">
+                  <svg id="phone-icon" width="20" height="20">
                     <use href="img/sprite.svg#phone"></use>
                   </svg>+6289 456 3455</a><a class="contacts__item" href="https://www.funiro.com" target="_blank">www.funiro.com</a></div>
             </div>
@@ -367,7 +448,7 @@
               <form class="subscribe__form">
                 <input class="subscribe__input input" placeholder="Enter your email" required="required" type="email"/>
                 <button class="subscribe__button" type="submit">
-                  <svg width="24" height="24">
+                  <svg id="send-icon" width="24" height="24">
                     <use href="img/sprite.svg#send"></use>
                   </svg>
                 </button>
@@ -377,9 +458,6 @@
         </div>
       </footer>
     </div>
-    <script src="js/main.min.js"></script>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/vendor.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

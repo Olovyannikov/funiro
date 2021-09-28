@@ -5,6 +5,7 @@
 
   @include lg-block {
     font: var(--font-logo);
+    white-space: nowrap;
   }
 }
 

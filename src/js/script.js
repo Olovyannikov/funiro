@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation();
     products();
     carousel();
+    products();
     cart();
-    products()
 });
