@@ -1,0 +1,38 @@
+-
+    var tipses = [
+        {
+            "id": 1, "text": "How to create a living room to love", "date": "20 jan 2020"
+        },
+        {
+            "id": 2, "text": "Solution for clean look working space", "date": "10 jan 2020"
+        },
+        {
+            "id": 3, "text": "Make your cooking activity more fun with good setup", "date": "20 jan 2020"
+        }
+    ];
+
+section.tips
+    .tips__container.container
+        h2.title.tips__title Tips & Tricks
+        .tips__slider.slider-tips
+            .slider-tips__body.swiper
+                .swiper-wrapper.slider-tips__wrapper
+                    each slide in tipses
+                        .slider-tips__slide.swiper-slide
+                            a(href="#").slider-tips__image
+                                picture
+                                    source(
+                                        srcset=`./img/tips-` + slide.id + `@2x.webp 2x, ./img/tips-` + slide.id + `.webp`
+                                    )
+                                    img(
+                                        srcset=`./img/tips-` + slide.id + `@2x.jpeg 2x` src=`./img/tips-` + slide.id + `.jpeg`
+                                    )
+                            .slider-tips__content
+                                h4.slider-tips__title #{slide.text}
+                                datetime.slider-tips__date #{slide.date}
+            .slider-tips__bullets.slider-pagination
+            .slider-tips__controls.slider-controls
+                button(type="button").slider-arrow.slider-arrow--prev
+                    +svg('chevron', '20', '20')
+                button(type="button").slider-arrow.slider-arrow--next
+                    +svg('chevron', '20', '20')

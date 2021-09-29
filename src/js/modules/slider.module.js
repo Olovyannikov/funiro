@@ -19,7 +19,6 @@ export const carousel = () => {
                     nextEl: '.carousel__next',
                     prevEl: '.carousel__prev'
                 },
-                parallax: true,
             }
         }
     });
@@ -28,7 +27,6 @@ export const carousel = () => {
         slidesPerView: 1,
         spaceBetween: 24,
         loop: true,
-        parallax: true,
         pagination: {
             el: '.slider-rooms__bullets',
             clickable: true
@@ -43,4 +41,27 @@ export const carousel = () => {
             }
         }
     });
+
+    const tips = new Swiper('.slider-tips__body', {
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loop: true,
+        pagination: {
+            el: '.slider-tips__bullets',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.slider-tips__controls .slider-arrow--next',
+            prevEl: '.slider-tips__controls .slider-arrow--prev'
+        },
+        breakpoints: {
+            592: {
+                slidesPerView: '2'
+            },
+
+            768: {
+                slidesPerView: '3',
+            }
+        }
+    })
 };
